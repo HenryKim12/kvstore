@@ -4,11 +4,11 @@
 #include <iostream>
 
 int main() {
-  std::cout << "Initializing store..." << std::endl;
+  std::cout << "[Main] Initializing store..." << std::endl;
   Store store;
   std::cout << "Done!" << std::endl;
 
-  std::cout << "Starting server..." << std::endl;
+  std::cout << "[Main] Starting server..." << std::endl;
   Server server(store, 6379);
   std::cout << "Done!" << std::endl;
 

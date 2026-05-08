@@ -9,4 +9,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(include)
 
 # Compile the executable
-add_executable(kvstore src/main.cpp src/store.cpp src/server.cpp)
+add_executable(kvstore src/main.cpp src/store.cpp src/server.cpp src/protocol.cpp)
