@@ -1,5 +1,6 @@
 #pragma once
 #include <optional>
+#include <shared_mutex>
 #include <string>
 #include <string_view>
 #include <unordered_map>
@@ -15,6 +16,8 @@ public:
 
 private:
   std::unordered_map<std::string, std::string> data_;
+  mutable std::shared_mutex mutex_;
 
+  // Caller must hold at least a shared lock on mutex_.
   bool exists(std::string_view key) const;
 };
